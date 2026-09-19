@@ -1,46 +1,61 @@
-Sistema de Agendamento de Serviços
-Sistema desenvolvido em Java para gerenciamento de clientes, serviços e agendamentos.
+# Sistema de Agendamento de Serviços
 
-Sobre o projeto
-Este projeto foi desenvolvido como prática de Programação Orientada a Objetos (POO) em Java, aplicando conceitos fundamentais da linguagem na construção de um sistema de agendamento de serviços.
+Projeto acadêmico em Java que simula o cadastro de clientes e serviços, a criação de agendamentos e o cálculo do valor total.
 
-Funcionalidades
-- Cadastro de clientes;
-- Cadastro de serviços;
-- Criação de agendamentos;
-- Exibição das informações dos agendamentos.
+## Funcionalidades
 
-Tecnologias utilizadas
-- Java;
-- NetBeans;
-- Apache Ant.
+- Cadastro de clientes
+- Cadastro de serviços
+- Criação de agendamentos
+- Cálculo do valor do serviço conforme as horas informadas
+- Acompanhamento do status do serviço
 
-Conceitos praticados
-Durante o desenvolvimento foram aplicados conceitos como:
-- Classes e objetos;
-- Atributos e métodos;
-- Encapsulamento;
-- Getters e setters;
-- Construtores;
-- Métodos com parâmetros e retorno;
-- Organização de classes.
+## Conceitos praticados
 
-Como executar
-1. Clone o repositório:
+- Classes e objetos
+- Encapsulamento com getters e setters
+- Construtores
+- Métodos com parâmetros e retorno
+- Enumeração para status de serviço
+- Organização de classes
 
-```bash
-git clone https://github.com/BelfortHw0/sistema-agendamento-servicos.git
+## Tecnologias
+
+- Java
+- Apache Ant
+- NetBeans
+
+## Estrutura
+
+```text
+src/
+├── Main.java          # Demonstração do sistema
+├── Cliente.java       # Dados do cliente
+├── Serviço.java       # Dados e status do serviço
+└── Agendamento.java   # Relação entre cliente, serviço e horas
 ```
 
-2. Abra o projeto no **NetBeans**.
+## Como executar
 
+### Pelo NetBeans
+
+1. Clone o repositório.
+2. Abra o projeto no NetBeans.
 3. Execute a classe `Main.java`.
 
-Status do projeto:
-- Em desenvolvimento.
-Novas funcionalidades e melhorias serão adicionadas conforme o projeto evolui.
+### Pelo terminal
 
-Autor
-- Pedro Fabiano Belfort
+Com um JDK instalado, na raiz do repositório execute:
 
-Projeto desenvolvido para estudos e prática de desenvolvimento de software.
+```bash
+javac -encoding UTF-8 -d out src/*.java
+java -cp out Main
+```
+
+## Status
+
+Em desenvolvimento. O repositório representa uma prática de POO e pode evoluir com persistência de dados, validações e uma interface de usuário.
+
+## Autor
+
+Pedro Fabiano Belfort
