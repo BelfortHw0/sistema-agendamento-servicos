@@ -13,6 +13,25 @@ Projeto desenvolvido em Java para gestão de assinaturas, planos e agendamentos 
 * `src/main/resources/sql`: Script DDL do banco de dados (`schema.sql`).
 * `src/test/java`: Testes automatizados com JUnit 5.
 
+##  Como Clonar e Executar o Projeto
+
+1. **Clonar o repositório:**
+   ```bash
+   git clone https://github.com/BelfortHw0/sistema-agendamento-servicos.git
+
+1. **Entrar na pasta do projeto:**
+
+```
+cd sistema-agendamento-servicos
+
+```
+
+1. **Compilar o projeto com o Maven:**
+
+```
+mvn compile
+```
+
 ##  Como Executar os Testes
 No terminal do projeto, execute:
 ```bash
@@ -22,15 +41,19 @@ mvn test
 
 ---
 
-### 4.  **Fazer o Commit e Push das Melhorias**
+###  2. Comandos para Executar no Terminal (Git Bash / NetBeans)
 
-Agora execute a sequência de comandos para salvar a organização no GitHub:
+Após criar e salvar o arquivo `README.md` e ter configurado o `.gitignore`, abra o terminal e execute estes três comandos, um de cada vez:
 
-# 1. Adicionar as alterações (.gitignore, README.md, remoção do target)
+```bash
 git add .
 
-# 2. Criar o commit de refatoração
+```
+
+```
 git commit -m "docs: adiciona README.md e configura .gitignore para ignorar artefatos de build"
 
-# 3. Enviar para o GitHub
+```
+
+```
 git push origin main
