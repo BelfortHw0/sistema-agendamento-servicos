@@ -1,72 +1,36 @@
-Sistema de Agendamento de Serviços
-Sistema desenvolvido em Java para gerenciamento de clientes, serviços e agendamentos.
+# Sistema de Agendamento de Serviços (SaaS)
 
-Sobre o projeto
-Este projeto foi desenvolvido como prática de Programação Orientada a Objetos (POO) em Java, aplicando conceitos fundamentais da linguagem na construção de um sistema de agendamento de serviços.
+Projeto desenvolvido em Java para gestão de assinaturas, planos e agendamentos de serviços.
 
-Funcionalidades
-- Cadastro de clientes;
-- Cadastro de serviços;
-- Criação de agendamentos;
-- Exibição das informações dos agendamentos.
+##  Tecnologias Utilizadas
+* **Java 17/21**
+* **Apache Maven** (Gerenciador de dependências e compilação)
+* **JUnit 5** (Testes de unidade automatizados)
+* **MySQL** (Modelagem de banco de dados relacional)
 
-Tecnologias utilizadas
-- Java;
-- Maven;
-- JUnit 5;
-- NetBeans ou outra IDE compatível com Maven.
+##  Estrutura do Projeto
+* `src/main/java`: Classes de domínio (`Plano`, `Assinante`) com encapsulamento e regras de negócio.
+* `src/main/resources/sql`: Script DDL do banco de dados (`schema.sql`).
+* `src/test/java`: Testes automatizados com JUnit 5.
 
-Estrutura do projeto
-O projeto segue a estrutura padrão do Maven para manter o código, os testes e os recursos separados.
-
-- `src/main/java`: código-fonte da aplicação;
-- `src/main/resources/db`: scripts do banco de dados;
-- `src/test/java`: testes automatizados;
-- `.github/workflows`: validação automática dos próximos commits e pull requests;
-- `CONTRIBUTING.md`: orientações para branches, commits e pull requests.
-
-Conceitos praticados
-Durante o desenvolvimento foram aplicados conceitos como:
-- Classes e objetos;
-- Atributos e métodos;
-- Encapsulamento;
-- Getters e setters;
-- Construtores;
-- Métodos com parâmetros e retorno;
-- Organização de classes.
-
-Como executar
-1. Clone o repositório:
-
+##  Como Executar os Testes
+No terminal do projeto, execute:
 ```bash
-git clone https://github.com/BelfortHw0/sistema-agendamento-servicos.git
+mvn test
+
 ```
 
-2. Certifique-se de ter o JDK 26 e o Maven instalados.
+---
 
-3. Execute os testes:
+### 4.  **Fazer o Commit e Push das Melhorias**
 
-~~~bash
-mvn test
-~~~
+Agora execute a sequência de comandos para salvar a organização no GitHub:
 
-4. Gere e execute a aplicação:
+# 1. Adicionar as alterações (.gitignore, README.md, remoção do target)
+git add .
 
-~~~bash
-mvn package
-java -jar target/sistema-agendamento-servicos-1.0-SNAPSHOT.jar
-~~~
+# 2. Criar o commit de refatoração
+git commit -m "docs: adiciona README.md e configura .gitignore para ignorar artefatos de build"
 
-Também é possível abrir o arquivo `pom.xml` no NetBeans e executar a classe `Main.java`.
-
-Contribuições
-Consulte o arquivo `CONTRIBUTING.md` para manter o mesmo padrão nos próximos commits e pull requests.
-
-Status do projeto:
-- Em desenvolvimento.
-Novas funcionalidades e melhorias serão adicionadas conforme o projeto evolui.
-
-Autor
-- Pedro Fabiano Belfort
-
-Projeto desenvolvido para estudos e prática de desenvolvimento de software.
+# 3. Enviar para o GitHub
+git push origin main
