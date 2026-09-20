@@ -12,8 +12,18 @@ Funcionalidades
 
 Tecnologias utilizadas
 - Java;
-- NetBeans;
-- Apache Ant.
+- Maven;
+- JUnit 5;
+- NetBeans ou outra IDE compatível com Maven.
+
+Estrutura do projeto
+O projeto segue a estrutura padrão do Maven para manter o código, os testes e os recursos separados.
+
+- `src/main/java`: código-fonte da aplicação;
+- `src/main/resources/db`: scripts do banco de dados;
+- `src/test/java`: testes automatizados;
+- `.github/workflows`: validação automática dos próximos commits e pull requests;
+- `CONTRIBUTING.md`: orientações para branches, commits e pull requests.
 
 Conceitos praticados
 Durante o desenvolvimento foram aplicados conceitos como:
@@ -32,9 +42,25 @@ Como executar
 git clone https://github.com/BelfortHw0/sistema-agendamento-servicos.git
 ```
 
-2. Abra o projeto no **NetBeans**.
+2. Certifique-se de ter o JDK 26 e o Maven instalados.
 
-3. Execute a classe `Main.java`.
+3. Execute os testes:
+
+~~~bash
+mvn test
+~~~
+
+4. Gere e execute a aplicação:
+
+~~~bash
+mvn package
+java -jar target/sistema-agendamento-servicos-1.0-SNAPSHOT.jar
+~~~
+
+Também é possível abrir o arquivo `pom.xml` no NetBeans e executar a classe `Main.java`.
+
+Contribuições
+Consulte o arquivo `CONTRIBUTING.md` para manter o mesmo padrão nos próximos commits e pull requests.
 
 Status do projeto:
 - Em desenvolvimento.

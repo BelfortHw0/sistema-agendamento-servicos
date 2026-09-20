@@ -1,3 +1,9 @@
-build/
-dist/
-nbproject/private/
+# Arquivos de compilação do Maven
+/target/
+
+# Configurações locais do IDE (NetBeans)
+/nbproject/private/
+/nbproject/workspace-impl.xml
+
+# Arquivos compilados Java
+*.class *.jar

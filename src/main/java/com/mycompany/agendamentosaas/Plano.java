@@ -1,4 +1,4 @@
-package com.mycompany.agendamentosaas;
+package io.github.belforthw0.agendamento;
 
 public class Plano {
 

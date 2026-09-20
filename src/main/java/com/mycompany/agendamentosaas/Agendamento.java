@@ -1,4 +1,6 @@
 
+package io.github.belforthw0.agendamento;
+
 class Agendamento {
 
     private Cliente cliente;

@@ -1,4 +1,4 @@
-package com.mycompany.agendamentosaas;
+package io.github.belforthw0.agendamento;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
