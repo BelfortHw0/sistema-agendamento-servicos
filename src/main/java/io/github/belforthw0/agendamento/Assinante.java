@@ -31,11 +31,11 @@ public class Assinante {
     public int getIdAssinante() {
         return idAssinante;
     }
-    
+
     public String getStatus() {
         return status;
     }
-    
+
     public String getNomeAssinante() {
         return nomeAssinante;
     }
