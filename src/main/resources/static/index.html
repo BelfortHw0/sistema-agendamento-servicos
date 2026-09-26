@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendamentoSaaS - Planos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header> <!--Define o cabeçalho da página-->
+        <h1>Agendamento SaaS</h1> <!--Define o título principal da página-->
+        <p>Gerencie seus agendamentos de forma simples e eficiente</p>
+    </header>
+
+    <main> <!--Define conteúdo principal e exclusivo da página-->
+        <section class="planos-container"> <!--Agrupa um bloco temático de conteúdo (exibição dos planos)-->
+            <h2>Escolha o seu Plano</h2>
+
+            <div class="grid">
+                <!--Card 1: Plano gratuito-->
+                
+                <article class="card">
+                    <!--Article representa uma unidade autônoma de conteúdo que faz sentido por si só (Cada cartão de plano é um artigo independente)-->
+                    <h3>Plano Gratuito</h3>
+                    <p class="preco">R$ 0,00 <span>/mês</span></p>
+                    <ul>
+                        <li>Até 10 agendamentos / mês</li>
+                        <li>Suporte por email</li>
+                    </ul>
+                </article>
+
+                <!--Card 2: Plano Pro-->
+                <article class="card destaque">
+                    <h3>Plano Pro</h3>
+                    <p class="preco">R$ 49,90 <span>/mês</span></p>
+                    <ul>
+                        <li>Agendamentos ilimitados</li>
+                        <li>Atendimento via WhatsApp</li>
+                        <li>Suporte prioritário</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="Cadastro"> <!--Seção do Cadastro-->
+            
+            <h2>Assine o AgendamentoSaaS</h2> <!--Título do formulário-->
+            
+            <form action="Assinar"> <!--Inicio do formulário-->
+                
+                <div class="campo">
+                    <label for="nome">Nome Completo: </label>
+                    <input required type="text" id="nome" name="nome">
+                </div>
+
+                <div class="campo"> <!--Campo de preenchimento do email-->
+                    <label for="email">Email: </label>
+                    <input required type="email" id="email" name="email">
+                </div>
+
+                <div class="campo"> <!--Campo de escolha do plano-->
+                    
+                    <label for="plano">Escolha o plano: </label>
+                    <select name="selecao_plano" id="plano">
+                        <option value="PlanoGratuito">Plano Gratuito - R$ 0,00</option>
+                        <option value="PlanoPro">Plano Pro - R$ 49,90</option>
+                    </select>
+
+                </div>
+                <button type="submit">Finalizar assinatura</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 AgendamentoSaaS. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

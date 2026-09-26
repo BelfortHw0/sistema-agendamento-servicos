@@ -1,0 +1,197 @@
+* {
+    /* reinicio global aplica as regras dentro das chaves a todos os elementos da pagina html */
+    margin: 0;
+    /* zera as margens externas padrão que os navegadores aplicam automaticamente aos elementos */
+    padding: 0;
+    /* zera espaçamento interno padrão dos elementos */
+    box-sizing: border-box;
+    /* Altera a forma como a largura e altura são calculadas */
+}
+
+body {
+    /* estilo do corpo da pagina (todo o conteúdo visível) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* define a lista de fontes do site. o navegador tenta a primeira da lista. se nao estiver instalada, vai para a prox */
+
+    background-color: #f4f6f9;
+    /* define a cor de fundo de toda a pagina para um cinza bem suave */
+    color: #333;
+    /* Define a cor do texto principal. Cinza bem escuro */
+    line-height: 1.6;
+    /* Aumenta a altura das linhas de texto para 1.6 vezes o tamanho da fonte, criando um espaçamento vertical confortável entre as linhas.*/
+}
+
+header {
+    /*Seleciona o elemento header (topo da pagina)*/
+    background-color: #2c3e50;
+    /*Define a cor de fundo do cabeçalho*/
+    color: #ffffff;
+    /*Define a cor de todo o texto do cabeçalho*/
+    text-align: center;
+    /*Alinha o título `<h1>` e o parágrafo `<p>` no centro horizontal do cabeçalho.</p></h1>*/
+    padding: 2rem 1 rem;
+    /*Adiciona espaçamento interno no cabeçalho: `2rem` no topo e na base (vertical) e `1rem` nas laterais (horizontal). *(Nota: 1rem equivale a aproximadamente 16px).**/
+}
+
+header h1 {
+    font-size: 2.2rem;
+    /*Aumenta o tamanho da fonte do título principal em 2.2 vezes*/
+    margin-bottom: 0.5rem;
+    /*Adiciona um pequeno espaço abaixo do título para que ele não fique colado no parágrafo descritivo.*/
+}
+
+main {
+    max-width: 1000px;
+    /*Limita a largura do conteúdo a no máximo 1000 pixels, impedindo que os cartões fiquem muito esticados em monitores grandes.*/
+    margin: 2rem auto;
+    /*Define a margem externa: `2rem` na parte superior e inferior, e **auto** nas laterais. O valor `auto` calcula automaticamente o espaço restante e centraliza o `<main>` na tela</main>*/
+    padding: 0 1rem;
+    /*Garante um pequeno respiro interno de `1rem` nas laterais para que o conteúdo não encoste na borda da tela ao abrir no celular.*/
+}
+
+/*==========================================BLOCO 2: SEÇÃO DE PLANOS E CARDS (FLEXBOX)==========================================*/
+/* 1\. Título da Seção de Planos */
+.planos-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/* 2\. Container Flexbox (Distribuição dos Cartões) */
+.grid {
+    display: flex;
+    gap: 1.5rem;
+    /* Espaço de 24px entre os cartões */
+    justify-content: center;
+    /* Centraliza os cartões horizontalmente */
+    flex-wrap: wrap;
+    /* Permite quebrar linha em telas pequenas (celular) */
+}
+
+/* 3. Estilo Base de Cada Cartão */
+.card {
+    background-color: #ffffff;
+    flex: 1;
+    /* Faz os cartões dividirem o espaço igualmente */
+    min-width: 280px;
+    /* Largura mínima antes de quebrar para a linha de baixo */
+    padding: 2rem;
+    /* Espaçamento interno confortável */
+    border-radius: 12px;
+    /* Arredondamento suave nos cantos */
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.12);
+    /* Sombra suave de elevação */
+    text-align: center;
+}
+
+/* 4\. Destaque do Plano Pro */
+.card.destaque {
+    border: 2px solid #3498db;
+    /* Borda azul destacando o plano principal */
+}
+
+/* 5. Preço e Unidade (/mês) */
+.preco {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 1rem 0;
+}
+
+.preco span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #7f8c8d;
+}
+
+/* 6. Lista de Benefícios */
+.card ul {
+    list-style: none;
+    /* Remove as bolinhas pretas da lista */
+    text-align: left;
+    /* Alinha os itens à esquerda para facilitar a leitura */
+    margin-top: 1.5rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+    /* Espaço entre cada item da lista */
+    font-size: 0.95rem;
+}
+
+.cadastro {
+    background-color: #ffffff;
+    /*Fundo branco*/
+    padding: 2rem;
+    /*espaçamento de 32px*/
+    border-radius: 12px;
+    /*cantos arredondados de 12 px*/
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.12);
+    /*sombra suave*/
+    margin-top: 3rem;
+    /*margem para se afastar dos cartões de cima*/
+}
+
+.cadastro h2 {
+    text-align: center;
+    /*centraliza o texto do h2*/
+    margin-bottom: 2rem;
+    /*dá um espaçamento na parte inferior (bottom)*/
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+    /*espaço na parte inferior de cada grupo*/
+}
+
+.campo label {
+    display: block;
+    /*Rótulo vira um elemento em bloco*/
+    margin-bottom: 0.5rem;
+    /*Pequeno espaço abaixo dele para não tocar na caixa*/
+    font-weight: 600;
+    /*Deixa o texto levemente em negrito*/
+}
+
+.campo input, .campo select {
+    width: 100%;
+    /*Campo ocupa toda a largura disponível*/
+    padding: 0.8rem;
+    /*Dá um espaçamento entre os campos*/
+    border: 1px solid #ccc;
+    /*Borda fina e suave*/
+    border-radius: 6px;
+    /*Borda fina e arredondada*/
+    font-size: 1rem;
+    /*Tamanho da fonte do campo*/
+}
+
+button {
+    width: 100%;
+    /*O botão ocupa toda a largura disponível*/
+    background-color: #2ecc71;
+    /*Cor de fundo do botão*/
+    color: #fff;
+    /*Cor do texto do botão*/
+    border: none;
+    /*Sem borda*/
+    padding: 1rem;
+    /*Espçamento interno*/
+    font-weight: bold;
+    /*Texto do botão em negrito*/
+    border-radius: 6px;
+    /*Cantos finos e arredondados*/
+    cursor: pointer;
+    /*Mude o ponteiro do mouse para indicador*/
+}
+
+button:hover {
+    background-color: #333;
+    /*Muda a cor de fundo para quando o cursor do mouse passar por cima do botão*/
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
