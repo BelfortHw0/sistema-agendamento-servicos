@@ -1,59 +1,58 @@
-# Sistema de Agendamento de Serviços (SaaS)
+# AgendamentoSaaS — Landing Page & Planos
 
-Projeto desenvolvido em Java para gestão de assinaturas, planos e agendamentos de serviços.
-
-##  Tecnologias Utilizadas
-* **Java 17/21**
-* **Apache Maven** (Gerenciador de dependências e compilação)
-* **JUnit 5** (Testes de unidade automatizados)
-* **MySQL** (Modelagem de banco de dados relacional)
-
-##  Estrutura do Projeto
-* `src/main/java`: Classes de domínio (`Plano`, `Assinante`) com encapsulamento e regras de negócio.
-* `src/main/resources/sql`: Script DDL do banco de dados (`schema.sql`).
-* `src/test/java`: Testes automatizados com JUnit 5.
-
-##  Como Clonar e Executar o Projeto
-
-1. **Clonar o repositório:**
-   ```bash
-   git clone https://github.com/BelfortHw0/sistema-agendamento-servicos.git
-
-1. **Entrar na pasta do projeto:**
-
-```
-cd sistema-agendamento-servicos
-
-```
-
-1. **Compilar o projeto com o Maven:**
-
-```
-mvn compile
-```
-
-##  Como Executar os Testes
-No terminal do projeto, execute:
-```bash
-mvn test
-
-```
+Bem-vindo ao repositório do **AgendamentoSaaS**! Este projeto é uma aplicação de gerenciamento de agendamentos desenvolvida com foco em arquitetura limpa, front-end e boas práticas de Engenharia de Software.
 
 ---
 
-###  2. Comandos para Executar no Terminal (Git Bash / NetBeans)
+## Sobre o Projeto
 
-Após criar e salvar o arquivo `README.md` e ter configurado o `.gitignore`, abra o terminal e execute estes três comandos, um de cada vez:
+A **Landing Page** do AgendamentoSaaS foi criada para apresentar as opções de planos de assinatura, ao permitir que o usuário escolha entre o **Plano Gratuito** e o **Plano Pro**, além de disponibilizar um formulário de cadastro.
 
-```bash
-git add .
+### Tecnologias Utilizadas
 
-```
+* **HTML5 Semântico:** Estruturação organizada com `<header>`, `<main>`, `<section>`, `<article>`, `<form>` e `<footer>`.
+* **CSS3 & Flexbox:** Estilização moderna, uso de variáveis de espaçamento, cantos arredondados, sombras de elevação e layout flexível e responsivo (`display: flex`).
+* **Git & GitHub:** Controle de versão e versionamento do código.
+* **Visual Studio Code:** Escrita e estruturação do código.
+* **Extensão Live Server:** Visualização do desenvolvimento em tempo real.
 
-```
-git commit -m "docs: adiciona README.md e configura .gitignore para ignorar artefatos de build"
+---
 
-```
+## Funcionalidades da Interface
 
-```
-git push origin main
+- [x] **Cabeçalho (`<header>`):** Apresentação e proposta de valor do serviço.
+- [x] **Cartões de Planos (`<article>`):** Exibição lado a lado dos planos Gratuito e Pro com destaque visual para o plano principal.
+- [x] **Formulário de Assinatura (`<form>`):** Campos validados para nome, e-mail e seleção de plano via menu suspenso.
+- [x] **Design Responsivo:** Adaptação automática do layout para dispositivos móveis (smartphones) e desktops.
+- [x] **Rodapé (`<footer>`):** Direitos autorais e encerramento semântico.
+
+---
+
+## Como Executar o Projeto Localmente
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/SeuUsuario/AgendamentoSaaS.git
+   ```
+
+2. **Navegue até a pasta do projeto:**
+   ```bash
+   cd AgendamentoSaaS
+   ```
+
+3. **Abra o arquivo `index.html`:**
+   * Você pode dar duplo clique no arquivo `index.html` para abrir diretamente no seu navegador, ou
+   * Executar a extensão **Live Server** no VS Code.
+
+---
+
+## Próximos Passos (Back-End)
+
+- [ ] Conectar o formulário HTML a um controlador Java **Spring Boot** (`@PostMapping("/assinar")`).
+- [ ] Criar a classe DTO/Form para captura e validação dos dados de entrada.
+- [ ] Implementar a persistência do cadastro em banco de dados relacional (PostgreSQL/H2/MySQL com JPA/Hibernate).
+
+---
+
+**Desenvolvido por:** Pedro F. Belfort
+**Foco:** Back-end Java & Engenharia de Software
