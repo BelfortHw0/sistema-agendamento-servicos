@@ -49,7 +49,7 @@
             
             <h2>Assine o AgendamentoSaaS</h2> <!--Título do formulário-->
             
-            <form action="Assinar"> <!--Inicio do formulário-->
+            <form action="/assinar" method="POST"> <!--Inicio do formulário-->
                 
                 <div class="campo">
                     <label for="nome">Nome Completo: </label>
@@ -64,7 +64,7 @@
                 <div class="campo"> <!--Campo de escolha do plano-->
                     
                     <label for="plano">Escolha o plano: </label>
-                    <select name="selecao_plano" id="plano">
+                    <select name="selecaoPlano" id="plano">
                         <option value="PlanoGratuito">Plano Gratuito - R$ 0,00</option>
                         <option value="PlanoPro">Plano Pro - R$ 49,90</option>
                     </select>

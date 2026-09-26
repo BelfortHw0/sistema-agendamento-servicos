@@ -10,6 +10,8 @@
         <maven.compiler.release>26</maven.compiler.release>
         <junit.version>5.10.3</junit.version>
         <exec.mainClass>io.github.belforthw0.agendamento.Main</exec.mainClass>
+        <java.version>17</java.version>
+        <maven.compiler.release>17</maven.compiler.release>
     </properties>
     <dependencies>
         <dependency>
@@ -17,6 +19,11 @@
             <artifactId>junit-jupiter</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.2.5</version>
         </dependency>
     </dependencies>
     <build>
