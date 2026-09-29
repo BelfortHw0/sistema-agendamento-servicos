@@ -20,9 +20,9 @@ public class AssinanteTest {
         Assinante assinante = new Assinante(1, "Pedro", "pedro@email.com", planoPro);
 
         // 2\. Assert (Verificações)
-        assertEquals("ATIVO", assinante.getStatus());
+        assertEquals(Assinante.StatusAssinatura.ATIVO, assinante.getStatus());
         assertEquals("pedro@email.com", assinante.getEmail());
-        assertEquals("Pro", assinante.getPlano().getNomePlano());
+        assertEquals("Pro", assinante.getPlano().nomePlano());
     }
 
     /**
@@ -34,7 +34,7 @@ public class AssinanteTest {
         Assinante assinante = new Assinante(1, "Pedro", "pedro@email.com", planoGratuito);
         assinante.desativar();
         assinante.ativar();
-        assertEquals("ATIVO", assinante.getStatus());
+        assertEquals(Assinante.StatusAssinatura.ATIVO, assinante.getStatus());
     }
 
     /**
@@ -45,7 +45,7 @@ public class AssinanteTest {
         Plano planoGratuito = new Plano(1, "Gratuito", 0.0);
         Assinante assinante = new Assinante(1, "Pedro", "pedro@email.com", planoGratuito);
         assinante.desativar();
-        assertEquals("INATIVO", assinante.getStatus());
+        assertEquals(Assinante.StatusAssinatura.INATIVO, assinante.getStatus());
     }
 
     /**
@@ -62,7 +62,7 @@ public class AssinanteTest {
         assinante.setPlano(planoPro);
 
         // 3\. Assert: verifica se o plano atual do assinante é o "Pro"
-        assertEquals("Pro", assinante.getPlano().getNomePlano());
+        assertEquals("Pro", assinante.getPlano().nomePlano());
     }
 
 }

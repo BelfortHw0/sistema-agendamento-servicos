@@ -9,10 +9,13 @@ public class AssinaturaController {
 
     @PostMapping("/assinar")
     public String redirecionamento(AssinaturaForm form) {
-        System.out.println("--- Nova Assinatura Recebida ---");
-        System.out.println("Nome: " + form.getNome());
-        System.out.println("Email: " + form.getEmail());
-        System.out.println("Plano: " + form.getSelecaoPlano());
+        var resumo = """
+            --- Nova Assinatura Recebida ---
+            Nome: %s
+            Email: %s
+            Plano %s
+            """.formatted(form.nome(), form.email(), form.selecaoPlano());
+        System.out.println(resumo);
         return "redirect:/";
     }
 }

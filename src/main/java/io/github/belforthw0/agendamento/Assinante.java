@@ -6,7 +6,7 @@ public class Assinante {
     private int idAssinante;
     private String nomeAssinante;
     private String email;
-    private String status;
+    private StatusAssinatura status;
     private Plano plano;
 
     //construtor. define o status inicial como "ATIVO"
@@ -14,17 +14,21 @@ public class Assinante {
         this.idAssinante = idAssinante;
         this.nomeAssinante = nomeAssinante;
         this.email = email;
-        this.status = "ATIVO";
+        this.status = StatusAssinatura.ATIVO;
         this.plano = plano;
+    }
+
+    public enum StatusAssinatura {
+        ATIVO, INATIVO
     }
 
     //métodos expressivos
     public void ativar() {
-        this.status = "ATIVO";
+        this.status = StatusAssinatura.ATIVO;
     }
 
     public void desativar() {
-        this.status = "INATIVO";
+        this.status = StatusAssinatura.INATIVO;
     }
 
     //getters
@@ -32,8 +36,8 @@ public class Assinante {
         return idAssinante;
     }
 
-    public String getStatus() {
-        return status;
+    public StatusAssinatura getStatus() {
+        return this.status;
     }
 
     public String getNomeAssinante() {
@@ -48,7 +52,7 @@ public class Assinante {
         return plano;
     }
 
-    //setters
+    //setters   
     public void setNomeAssinante(String nomeAssinante) {
         this.nomeAssinante = nomeAssinante;
     }
